@@ -24,9 +24,10 @@ for st in stations:
     O3_ss = -0.5*(NO0 - O30 + alpha) + 0.5*math.sqrt((NO0 - O30 + alpha)**2 + 4*alpha*(NO20 + O30))
     mean_vals[st]["NO_conc"] = NO_mr * conv_factors["NO"]
     mean_vals[st]["NO2_conc"] = NO2_mr * conv_factors["NO2"]
+    mean_vals[st]["O3_conc"] = O3_mr * conv_factors["O3"]
     mean_vals[st]["O3_mr"] = O3_mr 
     mean_vals[st]["O3_ss_mr"] = O3_ss
 
 summary_df = pd.DataFrame.from_dict(mean_vals, orient='index')
 summary_df.to_csv("station_annual_means.csv", index=True)
-print(summary_df[["NO_conc","NO2_conc","O3_mr","O3_ss_mr"]])
+print(summary_df[["NO_conc","NO2_conc","O3_conc","O3_mr","O3_ss_mr"]])
