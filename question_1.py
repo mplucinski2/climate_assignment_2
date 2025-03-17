@@ -9,10 +9,7 @@ print(ozone_df.head(5))
 R = 8.314      
 N_A = 6.022e23 
 
-ozone_df['O3_concentration_molec_cm3'] = ozone_df.apply(
-    lambda row: row['O3'] * (row['plev'] / (R * row['tm1'])) * (N_A / 1e6),
-    axis=1
-)
+ozone_df['O3_concentration_molec_cm3'] = ozone_df.apply(lambda row: row['O3'] * (row['plev'] / (R * row['tm1'])) * (N_A / 1e6),axis=1)
 
 ozone_df.to_csv("ozone_with_concentration.csv", index=False)
 ozone_df = ozone_df.drop_duplicates(subset=['lat', 'plev'])

@@ -1,4 +1,4 @@
-Total_NOx (nmol/mol),O3_ss_NO_only (nmol/mol),O3_ss_NO2_only (nmol/mol),O3_ss_equal_NO_NO2 (nmol/mol)
+Total_NOx [nmol/mol],O3_ss_NO_only [nmol/mol],O3_ss_NO2_only [nmol/mol],O3_ss_equal_NO_NO2 [nmol/mol]
 0,0.0,0.0,0.0
 1,0.0,0.9160797830996161,0.45635610525666337
 2,0.0,1.7082039324993694,0.8442887702247601
