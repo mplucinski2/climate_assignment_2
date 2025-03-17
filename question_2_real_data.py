@@ -22,8 +22,8 @@ for st in stations:
     NO20 = NO2_ppb
     O30 = 0.0
     O3_ss = -0.5*(NO0 - O30 + alpha) + 0.5*math.sqrt((NO0 - O30 + alpha)**2 + 4*alpha*(NO20 + O30))
-    mean_vals[st]["NO_ppb"] = NO_ppb
-    mean_vals[st]["NO2_ppb"] = NO2_ppb
+    mean_vals[st]["NO_ppb"] = NO_ppb * conv_factors["NO"] #switching back to micrograms/cm^3
+    mean_vals[st]["NO2_ppb"] = NO2_ppb * conv_factors["NO2"] #switching back to micrograms/cm^3
     mean_vals[st]["O3_ppb"] = O3_ppb
     mean_vals[st]["O3_ss_ppb"] = O3_ss
 
